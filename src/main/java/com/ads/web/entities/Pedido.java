@@ -4,16 +4,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-public class Operador {
+@Table(name="Pedido")
+public class Pedido {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    private String nombre;
-    private String apellido;
-    private Long DNI;
-    private int codigo;
-
-    
+    private Long idProducto;
+    private int cantidadReq;
+    private String precio;
+    //private String total;
 }
